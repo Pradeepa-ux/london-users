@@ -1,0 +1,3 @@
+HerokuApp:
+  apiUri: https://bpdts-test-app.herokuapp.com/city/{city}/users
+  apiUri1: https://bpdts-test-app.herokuapp.com/users
