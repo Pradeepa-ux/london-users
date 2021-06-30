@@ -1,26 +1,6 @@
 package com.example.mydemo.domains.model;
 
-/*
- * import lombok.Data;
- * 
- * @Data public class Users {
- * 
- * private Integer id;
- * 
- * private String first_name;
- * 
- * private String last_name;
- * 
- * private String email;
- * 
- * private String ip_address;
- * 
- * private String latitude;
- * 
- * private String longitude;
- * 
- * }*/
- import java.util.HashMap;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
@@ -30,6 +10,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
+/**
+ * Class defining Users object both being consumed and returning.
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonPropertyOrder({
 "id",
@@ -60,20 +43,20 @@ public Users(Integer id, String firstName, String lastName, String email, String
 	this.longitude = longitude;
 }
 
-@JsonProperty("first_name")
-private String firstName;
-@JsonProperty("last_name")
-private String lastName;
-@JsonProperty("email")
-private String email;
-@JsonProperty("ip_address")
-private String ipAddress;
-@JsonProperty("latitude")
-private Double latitude;
-@JsonProperty("longitude")
-private Double longitude;
-@JsonIgnore
-private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+	@JsonProperty("first_name")
+	private String firstName;
+	@JsonProperty("last_name")
+	private String lastName;
+	@JsonProperty("email")
+	private String email;
+	@JsonProperty("ip_address")
+	private String ipAddress;
+	@JsonProperty("latitude")
+	private Double latitude;
+	@JsonProperty("longitude")
+	private Double longitude;
+	@JsonIgnore
+	private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 @JsonProperty("id")
 public Integer getId() {

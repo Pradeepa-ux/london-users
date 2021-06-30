@@ -14,6 +14,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * 
+ * @author Pradeepa
+ * Service to return the users in London/around 50 miles of london
+ */
 @Slf4j
 @Service
 public class MyDemoService {

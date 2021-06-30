@@ -13,6 +13,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * Controller act as REST endpoint of the application and calling service class
+ */
 @Slf4j
 @RestController
 public class MyDemoController {
@@ -24,6 +27,7 @@ public class MyDemoController {
 	public List<Users> listOfUsers() throws JsonProcessingException {
 
 		log.info("==============RECEIVED THE REQUEST FROM HEROKUAPP API TO RETURN THE PEOPLE LIVING IN LONDON/50 MILES OF LONDON===============");
+		
 		List<Users> users=myDemoService.getUsersInOrAroundLondonService();
 		return users!=null? users: new ArrayList<>();
 
